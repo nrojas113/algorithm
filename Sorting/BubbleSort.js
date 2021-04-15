@@ -30,11 +30,15 @@ output : [1,2,3,4,5]
 [1,2,3,4,5] <=3rd last element is in place (bubbled)
 
 Approach:
-1. loop over array from end to beginning
-2. start inner loop from beginning until i - 1
-3. if current num in the index is less then previous num, swap those two
-4. Repeat the process until all are sorted
-5. Optimize by adding stopping condition when no swaps are happening
+1. loop over array from beginning to end
+2. start inner loop from beginning until end - i
+   (because at each iteration, the end value is in place)
+3. if current num in the index is less then previous num,
+   swap those two
+4. Repeat the process until iteration reaches the end point
+5. Optimize by adding stopping condition when no swaps
+   are happening
+
 */
 
 function bubbleSort(arr) {
@@ -44,6 +48,8 @@ function bubbleSort(arr) {
     //in the beginning, we assume that there are no swaps every time through
     //reset the noSwaps status to true everytime
     noSwaps = true;
+    //iterate from first index (2nd item) and continue the loop until i'th to the last element.
+    //because we know that at each iteration, largest number bubbled at to the end, so no need to check the end.
     for (let j = 1; j < arr.length - i; j++) {
       //compare second item to previous item
       if (arr[j] < arr[j - 1]) {
