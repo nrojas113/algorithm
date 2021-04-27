@@ -48,8 +48,10 @@ function bubbleSort(arr) {
     //in the beginning, we assume that there are no swaps every time through
     //reset the noSwaps status to true everytime
     noSwaps = true;
-    //iterate from first index (2nd item) and continue the loop until i'th to the last element.
-    //because we know that at each iteration, largest number bubbled at to the end, so no need to check the end.
+    //iterate from first index (2nd item) and continue the
+    //loop until i'th to the last element.
+    //because we know that at each iteration, largest number
+    //bubbled at to the end, so no need to check the end.
     for (let j = 1; j < arr.length - i; j++) {
       //compare second item to previous item
       if (arr[j] < arr[j - 1]) {
@@ -76,7 +78,8 @@ function bubbleSort(arr) {
 Time complexity :
 best case - O(n)
 worst case - O(n^2)
-Because we have nested loop, and we are making roughly making a comparison, for each item in that array, we are making N number of comparisons.
+Because we have nested loop, and we are making roughly making a comparison,
+for each item in that array, we are making N number of comparisons.
 If data is nearly sorted or sorted already, then it will be O(n) - linear time
 If we know that the data is nearly sorted, then bubble sort could be good.
 

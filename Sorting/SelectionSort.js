@@ -81,7 +81,8 @@ roughly, we have to compare every element
 to every other element in the array.
 As the length of array grows, the number of comparisons grows,
 roughly at the rate of n * n.
-Technically, the scope shrinks each loop, but that doesn't really matter, it is drastically worse than we only had to make
+Technically, the scope shrinks each loop, but that doesn't
+really matter, it is drastically worse than we only had to make
 single comparison.
 
 */
