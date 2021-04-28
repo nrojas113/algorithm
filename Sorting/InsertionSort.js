@@ -19,7 +19,7 @@ sorted portion until it reaches the end.
 input : [5,3,4,1,2]
 output : [1,2,3,4,5]
 
-1st loop (0th index - 5)
+1st loop
 [5,3,4,1,2] -> target: 3, sorted portion of array: [5] => move 3 to index 0
 [3,5,4,1,2] -> target: 4, sorted portion of array: [3, 5] => move 4 to index 1
 [3,4,5,1,2] -> target: 1, sorted portion of array: [3, 4, 5] => move 1 to index 0
@@ -47,7 +47,7 @@ function insertionSort(arr) {
     let currentValue = arr[i];
     //We want to compare i (current value) to the previous item, so i - 1
     let j = i - 1;
-    //Another loop to go backwards:
+    //Start comparing from end to beginning:
     //While j is greater than or equal to 0 (havent reach the beginning of the array yet)
     //& item we have (at index j) is greater than current value,
     //we need to shift the item to the right
@@ -62,6 +62,7 @@ function insertionSort(arr) {
     //so insert the current value to the index position we found during loop.
     arr[j + 1] = currentValue;
   }
+  return arr;
 }
 
 /*
