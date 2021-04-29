@@ -24,7 +24,7 @@ output : [1,2,3,4,5,6,7,8]
 
 [8,3] [5,4]    [7,6]  [1,2] -> split in half
 
-[8] [3] [5] [4] [7] [6] [1] [2] -> split in half until elements in the array
+[8] [3] [5] [4] [7] [6] [1] [2] -> split in half until there is only 1 element in the array
 
 2. merging two sorted array by comparing the first element inside the array & putting inside new array
 Take first item, compare to first item in the other array, put the smaller number first inside the new array
