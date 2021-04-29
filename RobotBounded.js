@@ -76,7 +76,7 @@ function isRobotBounded(instruction) {
       dir = (dir + 1) % 4;
     } else if (i === "L") {
       //if current instruction is to turn left, change the current direction to "Left" = 3
-      dir = (dir + 3) % 4;
+      dir = (dir - 1) % 4;
     }
   }
 
