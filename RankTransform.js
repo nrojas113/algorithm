@@ -82,7 +82,7 @@ function rankGenerator(scoreArr) {
 }
 
 function numPlayersLeveledUP(k, score) {
-  //get array of ranks ex.[1,1,5,4,3]
+  //transform array of scores to array of ranks ex.[1,1,5,4,3]
   let rankArr = rankGenerator(score);
 
   //iterate through the rank array and count how many elements have
