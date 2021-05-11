@@ -43,25 +43,3 @@ function isPalindrome(string) {
   let restChars = string.slice(1, string.length - 1);
   return isPalindrome(restChars);
 }
-
-//Approach 2: O(n) time | O(1) space
-function isPalindrome2(string) {
-  //define two pointers (start & end)
-  let leftIdx = 0;
-  let rightIdx = string.length - 1;
-
-  //while left & right doesn't go over each other
-  //check if both of current pointer's values are equal to eachother.
-  while (leftIdx < rightIdx) {
-    if (string[leftIdx] !== string[rightIdx]) {
-      //if not equal, return false
-      return false;
-    }
-    //otherwise, update both left & right pointer to repeat again
-    leftIdx++;
-    rightIdx--;
-  }
-
-  //if breakout of loop, means all the values were equal, so return true
-  return true;
-}

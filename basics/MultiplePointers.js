@@ -85,3 +85,37 @@ Space complexity:
 O(1) constant, because we are not storing any big data
 (doesn't increase in size in respect to the input size)
 */
+
+/*PALINDROME CHECK
+
+prompt: write a function that takes in a non-empty string and that
+ returns a boolean representing whether the string is a palindrome.
+ A palindrome is defined as a string that's written the same forward
+ and backward. note that single-character strings are palindromes.
+
+ Example:
+ isPalindrome('hello') => false
+ isPalindrome('elle') => true
+*/
+
+//Approach2: O(n) time | O(1) space
+function isPalindrome2(string) {
+  //define two pointers (start & end)
+  let leftIdx = 0;
+  let rightIdx = string.length - 1;
+
+  //while left & right doesn't go over each other
+  //check if both of current pointer's values are equal to eachother.
+  while (leftIdx < rightIdx) {
+    if (string[leftIdx] !== string[rightIdx]) {
+      //if not equal, return false
+      return false;
+    }
+    //otherwise, update both left & right pointer to repeat again
+    leftIdx++;
+    rightIdx--;
+  }
+
+  //if breakout of loop, means all the values were equal, so return true
+  return true;
+}
